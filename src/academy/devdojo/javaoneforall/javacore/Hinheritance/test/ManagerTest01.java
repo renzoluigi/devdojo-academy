@@ -15,10 +15,10 @@ Initialization order from an inheritance context:
 0 - Static init block from the superclass is executed (only once) + static attributes initialized
 1 - Static init block from the subclass is executed (only once) + static attributes initialized
 2 - Memory is allocated for the superclass
-3 - Attributes from the superclass initialized
-4 - Init blocks from the superclass are executed in the order they appear
-5 - Constructor from the superclass executed
-6 - Memory is allocated for the subclass
+3 - Memory is allocated for the subclass
+4 - Attributes from the superclass initialized
+5 - Init blocks from the superclass are executed in the order they appear
+6 - Constructor from the superclass executed
 7 - Attributes from the subclass initialized
 8 - Init blocks from the subclass executed in the order they appear
 9 - Constructor from the subclass executed
