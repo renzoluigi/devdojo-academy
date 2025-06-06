@@ -1,16 +1,26 @@
 package academy.devdojo.javaoneforall.javacore.Hinheritance.domain;
 
 public class Employee {
-    private String name;
-    private String socialSecurityNumber;
-    private Address address;
-    private double salary;
+    protected String name;
+    protected String socialSecurityNumber;
+    protected Address address;
+    protected double salary;
+    static{
+        System.out.println("Inside static init block from Employee (superclass)");
+    }
+    {
+        System.out.println("Inside init block 1 from Employee (superclass)");
+    }
+    {
+        System.out.println("Inside init block 2 from Employee (superclass)");
+    }
 
     public Employee(String name, String socialSecurityNumber, Address address, double salary) {
         this.name = name;
         this.socialSecurityNumber = socialSecurityNumber;
         this.address = address;
         this.salary = salary;
+        System.out.println("Inside Employee constructor (superclass)");
     }
 
     @Override
