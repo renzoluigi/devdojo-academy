@@ -5,6 +5,10 @@ public class Car {
     public static final double SPEED_LIMIT = 130; // You have to initialize this attribute to be a constant
     public final Buyer BUYER = new Buyer();
 
+    public final void print() {
+        System.out.println(name);
+    }
+
     public String getName() {
         return name;
     }
