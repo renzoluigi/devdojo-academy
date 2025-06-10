@@ -8,9 +8,9 @@ import academy.devdojo.javaoneforall.javacore.Npolymorphism.service.ProductTaxRe
 public class ProductTest03 {
     public static void main(String[] args) {
         Product product = new Computer("Ryzen 5", 700);
-
         Tomato tomato = new Tomato("Greek", 5);
         tomato.setWeight(10.4);
+
         ProductTaxReportService.generateTaxReport(tomato);
         System.out.println("-------");
         ProductTaxReportService.generateTaxReport(product);

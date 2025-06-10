@@ -1,0 +1,9 @@
+All the errors and instances are an instance of Throwable
+
+Error ≠ Exception (They aren't subclass)
+Errors can't be treated, and rarely are caught by the code, because he is a problem of the JVM, not of the program (OutOfMemoryError, StackOverflowError...)
+Exceptions can be caught and treated during the execution of the program (IOException, NullPointerException...
+
+Exceptions can be checked and unchecked
+Checked -> Exceptions directly daughters of Exception, if they don't treat, the program can't be compiled
+Unchecked -> They are subclasses of RuntimeException or is she, they generally are caused by the developer
