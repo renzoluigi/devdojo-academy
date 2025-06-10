@@ -3,8 +3,6 @@ package academy.devdojo.javaoneforall.javacore.Kenum.domain;
 import academy.devdojo.javaoneforall.javacore.Jfinalmodifier.domain.CustomerType;
 
 public class Customer {
-
-
     private String name;
     private CustomerType customerType;
     private PaymentType paymentType;

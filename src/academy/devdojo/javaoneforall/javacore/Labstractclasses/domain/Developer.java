@@ -1,8 +1,8 @@
 package academy.devdojo.javaoneforall.javacore.Labstractclasses.domain;
 
 // The first concrete class must provide implementation of the abstract classes he is inheriting
-public class Manager extends Employee { // Class 'Manager' must either be declared abstract or implement abstract method 'print()' in 'Person'
-    public Manager(String name, double salary) {
+public class Developer extends Employee {
+    public Developer(String name, double salary) {
         super(name, salary);
     }
 
@@ -12,12 +12,11 @@ public class Manager extends Employee { // Class 'Manager' must either be declar
 
     @Override
     public void calculateBonusSalary() {
-        salary = salary + salary * 0.1;
     }
 
     @Override
     public String toString() {
-        return "Manager{" +
+        return "Developer{" +
                 "name='" + name + '\'' +
                 ", salary=" + salary +
                 '}';
