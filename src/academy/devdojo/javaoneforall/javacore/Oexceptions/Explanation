@@ -1,9 +1,21 @@
 All the errors and instances are an instance of Throwable
 
-Error ≠ Exception (They aren't subclass)
+- Error ≠ Exception (They aren't subclass) -
 Errors can't be treated, and rarely are caught by the code, because he is a problem of the JVM, not of the program (OutOfMemoryError, StackOverflowError...)
-Exceptions can be caught and treated during the execution of the program (IOException, NullPointerException...
+Exceptions can be caught and treated during the execution of the program (IOException, NullPointerException...)
 
+- Exceptions -
 Exceptions can be checked and unchecked
-Checked -> Exceptions directly daughters of Exception, if they don't treat, the program can't be compiled
-Unchecked -> They are subclasses of RuntimeException or is she, they generally are caused by the developer
+-> Checked -> Exceptions directly daughters of Exception, if they don't treat, the program can't be compiled
+If throw a checked exception, the method needs to handle this with try/catch
+-> Unchecked (Runtime Exceptions) -> They are subclasses of RuntimeException or is she, they generally are caused by the developer
+We don't need to throw (force) RuntimeExceptions because they generally are logic errors
+
+The main can throw Checked Exceptions, and the method (that threw it up on the stack) doesn't need to be handled, but if the exception reaches at him on the stack, he will crash
+
+- Handling Exceptions -
+TRY / CATCH -> To handle the Exception
+or
+TRY / FINALLY (ALWAYS will be executed) -> If you don't want to handle the exception
+
+MULTI CATCH -> With "Exception1 | Exception2 e"

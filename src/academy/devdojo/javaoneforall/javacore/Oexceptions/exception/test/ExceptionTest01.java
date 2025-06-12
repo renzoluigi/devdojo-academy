@@ -15,6 +15,7 @@ public class ExceptionTest01 {
             System.out.println("File created: " + isCreated );
         } catch (IOException e) {
             e.printStackTrace(); // The history of the exception
+            throw new RuntimeException("ERROR! Fail when tried to create file.");
         }
         System.out.println("Outside custom file creator");
     }
