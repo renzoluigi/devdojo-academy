@@ -6,7 +6,7 @@ public class StackOverFlowTest01 {
         recursion();
     }
 
-    public static void recursion() {
+    private static void recursion() {
         recursion();
     }
 }

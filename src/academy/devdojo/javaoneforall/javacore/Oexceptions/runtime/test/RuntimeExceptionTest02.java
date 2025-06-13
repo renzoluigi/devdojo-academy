@@ -6,7 +6,7 @@ public class RuntimeExceptionTest02 {
     public static void main(String[] args) throws IOException { // The main can throw the IOException, and the division method doesn't need to be handled, but if the exception reaches at him on the stack, he will crash
         try {
             System.out.println(division(1, 0));
-        } catch (IllegalArgumentException e) { // Runtime Exceptions don't need to be handled
+        } catch (IllegalArgumentException e) { // Runtime Exceptions don't need to be handled, because he generally is an error caused by the dev
             e.printStackTrace();
         }
         System.out.println("Finished successfully.");
@@ -19,7 +19,7 @@ public class RuntimeExceptionTest02 {
      * @return
      * @throws IllegalArgumentException if b is zero
      */
-    private static int division(int a, int b) throws IOException { // If throws a checked exception, the method needs to handle this with try/catch
+    private static int division(int a, int b) throws IOException { // If throws a checked exception, the method needs to handle this
         if (b == 0) {
             throw new IllegalArgumentException("The second argument can't be zero");
         }

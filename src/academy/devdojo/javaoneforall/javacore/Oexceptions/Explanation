@@ -9,7 +9,7 @@ Exceptions can be checked and unchecked
 -> Checked -> Exceptions directly daughters of Exception, if they don't treat, the program can't be compiled
 If throw a checked exception, the method needs to handle this with try/catch
 -> Unchecked (Runtime Exceptions) -> They are subclasses of RuntimeException or is she, they generally are caused by the developer
-We don't need to throw (force) RuntimeExceptions because they generally are logic errors
+We don't need to throw (force) RuntimeExceptions because they generally are logic errors caused by the developer
 
 The main can throw Checked Exceptions, and the method (that threw it up on the stack) doesn't need to be handled, but if the exception reaches at him on the stack, he will crash
 
@@ -18,4 +18,18 @@ TRY / CATCH -> To handle the Exception
 or
 TRY / FINALLY (ALWAYS will be executed) -> If you don't want to handle the exception
 
+CATCHING MULTIPLY EXCEPTIONS -> Careful with this, because some exceptions are superclasses and override if the catch stack is bad ordered
+
 MULTI CATCH -> With "Exception1 | Exception2 e"
+Can't have inherited exceptions in the same catch, like: "ArrayIndexOutOfBoundsException | IndexOutOfBoundsException e"
+
+RESOURCES -> That is useful if you want to close some variable inside try context "try(Reader1 reader1 = new Reader1(); Reader2 reader2 = new Reader2())"
+He auto closes the variable, you don't need to be worried with this
+If you want to use resources, the reference variable needs to implement the interface Closeable or Autocloseable
+
+- Custom Exceptions -
+We can create Exception using "extends Exception" (to checked exceptions) or "extends RuntimeException" (to unchecked exceptions)
+
+- Overriding Methods -
+When you overriding methods, you don't need to throw the same exceptions of the super, because it's a different behavior, but you can't add different checked exceptions from supermethod, only unchecked exceptions
+Can't throw father of the respective checked exceptions (but the opposite works) -> IOException and FileNotFoundException
