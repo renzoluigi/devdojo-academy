@@ -1,0 +1,14 @@
+=== Strings ===
+
+*Are immutable*
+
+== String Constant Pool ==
+
+A reserved place inside Memory Heap to save Strings
+You never can change a value in the String Pool
+String name3 = new String("Renzo"); -> Create a reference variable, an object outside the pool (normal object) and an object inside the pool (if not exists), but referees to the outside object, if you use the method intern() you can reference the inside object
+
+= Comparing Strings =
+name == name2; // Comparing references of the object in the pool, not the value
+System.out.println(name2 == name3); // A comparison of an outside object and an object from the pool
+System.out.println(name2 == name3.intern()); // Comparate to the object value in the pool (if he is in the pool)

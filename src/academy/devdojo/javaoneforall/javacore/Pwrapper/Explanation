@@ -1,0 +1,12 @@
+Primitive types and Reference Types (Wrappers)
+
+== Primitive Types ==
+Primitive Types aren't objects, he doesn't have methods
+Primitive types treat about memory
+
+== Wrappers ==
+Are objects, have methods, inheritance, etc..
+Integers cannot be longs (because are objects), like primitive types
+
+Autoboxing or Boxing -> Boolean booleanW = false;
+Unboxing -> boolean booleanP = booleanW;
