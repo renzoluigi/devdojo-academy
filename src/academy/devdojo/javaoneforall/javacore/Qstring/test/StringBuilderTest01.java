@@ -16,6 +16,5 @@ public class StringBuilderTest01 { // StringBuilder
 
         sb.delete(0,3);
         System.out.println(sb);
-
     }
 }

@@ -1,0 +1,8 @@
+== Date ==
+This class is deprecated after Java 1.1
+Works with longs (milliseconds after december 31st 1969)
+It's a bad option because can't offer good presentation of dates and internationalization of time zone
+
+== Calendar ==
+Isn't deprecated, but obsolete, more used in legacy systems
+Calendar is an abstract class, if you want to instantiate this, create an object of any of his subclasses (GregorianCalendar, BuddhistCalendar)
