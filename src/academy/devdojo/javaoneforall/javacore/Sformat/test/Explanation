@@ -1,0 +1,14 @@
+= DateFormat =
+A good way to format Date class, you can use Calendar.getTime() or the class Date
+Based on your JVM localization
+
+-> To format to a specific country and language, you can use the class Locale(language, country) inside the DateFormat constructor
+(LocaleTest01)
+
+= NumberFormat =
+A good way to format numbers, NumberFormat.getInstance(Locale) 10,000.219 -> 10.000,219
+-> To format different currencies, use NumberFormat.getCurrencyInstance(Locale)
+-> You can parse String values to number values of determinate localization or currency of determinate localization to number values
+
+= SimpleDateFormat =
+A custom pattern to format class Date -> "'São Paulo', dd 'de' MMMM 'de' yyyy, H 'horas' 'e' mm 'minutos'"

@@ -6,3 +6,20 @@ It's a bad option because can't offer good presentation of dates and internation
 == Calendar ==
 Isn't deprecated, but obsolete, more used in legacy systems
 Calendar is an abstract class, if you want to instantiate this, create an object of any of his subclasses (GregorianCalendar, BuddhistCalendar)
+
+=== after Java 8 ===
++ Immutable
++ Don't need to parse everytime
++ MIN and MAX
++ You can do more things using referringClass.get(ChronoField.ENUM)
+
+== LocalDate ==
++ No limit for dates
++ Use the pattern of the databases
+
+== LocalTime ==
++ Works like LocalDate
+
+== LocalDateTime ==
++ Works like the others above
++ Can be parsed with LocalDate.atTime(LocalTime or time) or LocalTime.atDate(LocalDate or date)
