@@ -7,11 +7,13 @@ It's a bad option because can't offer good presentation of dates and internation
 Isn't deprecated, but obsolete, more used in legacy systems
 Calendar is an abstract class, if you want to instantiate this, create an object of any of his subclasses (GregorianCalendar, BuddhistCalendar)
 
-=== after Java 8 ===
+=== java.time ===
++ Added after Java 8
 + Immutable
 + Don't need to parse everytime
 + MIN and MAX
 + You can do more things using referringClass.get(ChronoField.ENUM)
++ Characters P/T/S/H are from the ISO 8601 to represent time
 
 == LocalDate ==
 + No limit for dates
@@ -23,3 +25,28 @@ Calendar is an abstract class, if you want to instantiate this, create an object
 == LocalDateTime ==
 + Works like the others above
 + Can be parsed with LocalDate.atTime(LocalTime or time) or LocalTime.atDate(LocalDate or date)
+
+== Instant ==
++ A way to get the zulu / UTC time (good for internationalization)
++ Nano seconds
+
+== Duration ==
++ A way to get the difference between two dates, based on hours, minutes, seconds, nanoseconds]
++ LocalDateTimes/LocalTimes classes
++ Can't get between two LocalDates, because this class don't have the unit seconds
++ Works with hours, minutes and seconds
++ Can convert hours to days, months to years etc...
+
+== Period ==
++ Like the class Duration, but based on years, months and days
+
+== ChronoUnit ==
++ A good way to convert values and compare dates (method between())
+
+== ChronoField ==
++
+
+== TemporalAdjusters & TemporalAdjuster ==
++ TemporalAdjusters (class with created util methods)
++ TemporalAdjuster (classes which implements TemporalAdjuster can create logics to manipulate dates) -> TemporalAdjusterTest01.java
++ With this you can manipulate dates, like: "LocalDate.with(new GetNextBusinessDay() (created) or TemporalAdjusters.firstDayOfNextMonth())""
