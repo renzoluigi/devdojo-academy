@@ -35,7 +35,7 @@ Calendar is an abstract class, if you want to instantiate this, create an object
 + LocalDateTimes/LocalTimes classes
 + Can't get between two LocalDates, because this class don't have the unit seconds
 + Works with hours, minutes and seconds
-+ Can convert hours to days, months to years etc...
++ Can convert hours to days, months to years etc.
 
 == Period ==
 + Like the class Duration, but based on years, months and days
@@ -44,9 +44,21 @@ Calendar is an abstract class, if you want to instantiate this, create an object
 + A good way to convert values and compare dates (method between())
 
 == ChronoField ==
-+
++ Convert fields of dates
 
 == TemporalAdjusters & TemporalAdjuster ==
 + TemporalAdjusters (class with created util methods)
 + TemporalAdjuster (classes which implements TemporalAdjuster can create logics to manipulate dates) -> TemporalAdjusterTest01.java
-+ With this you can manipulate dates, like: "LocalDate.with(new GetNextBusinessDay() (created) or TemporalAdjusters.firstDayOfNextMonth())""
++ With this you can manipulate dates, like: "LocalDate.with(new GetNextBusinessDay() (created) or TemporalAdjusters.firstDayOfNextMonth())"
+
+== Zones ==
++ Can convert times to another time zones (ZonedId and ZonedDateTime)
++ Can create new time zones with ZoneOffset and use with OffsetDateTime/OffsetTime
+
+== Chronology ==
++ You can convert dates between them using like: "JapaneseDate.from(LocalDate.now)"
+- ISO -> LocalDate, LocalDateTime, etc.
+- JapaneseDate
+- Thai BuddhistDate
+- HijrahDate
+- MinguoDate
