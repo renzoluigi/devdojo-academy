@@ -1,0 +1,7 @@
+A way to internationalize your messages
+You can see the files in the package "Resource Bundle 'messages'"
+It works like the strings.xml of Android projects
+
+== Works with fallback ==
+If he is searching by a file "message_en_US.properties" and can't find this, he will search by "message_en.properties" if he doesn't find, he will search by "message.properties"
+The same occurs if he can't find a word in a file, he will search by similarity in the other files
