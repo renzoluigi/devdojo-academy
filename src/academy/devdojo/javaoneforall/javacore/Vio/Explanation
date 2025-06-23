@@ -1,0 +1,28 @@
+=== IO ===
++ Input and Output of files
+
+== File Classes ==
++ Miscellaneous classes to handle a file
+- Not optimized to big files (low level), isn't made for performance
+
+= File =
++ Create, delete and access to several properties of a file
+
+= FileWriter =
++ Write on a file (receives the file reference in constructor)
+
+= FileReader =
++ Read a file (receives the file reference in constructor)
+
+== Buffered classes ==
++ More performance (working with data and memory)
++ A buffer is an array in RAM memory (generally a char[])
++ The data stay temporarily in this buffer at RAM memory
++ When the buffer reaches the maximum of capacity (or was flushed), the data will be read or wrote on file (will try to use the smallest number of readings)
+
+= BufferedWriter =
++ Receives a FileWriter
++ You can pass the size of the buffer
+
+= BufferedReader =
++ Receives a FileReader

@@ -1,6 +1,7 @@
 === Regex ===
 + Regular Expressions are custom patterns to be found within a text (PatternMatcherTest01.java is showing how to use)
 + Use RegExr
++ Caution with case sensitive (a/A, b/B)
 
 == Metacharacters ==
 + Useful to find determined characters (use \\ to scape)
@@ -30,8 +31,3 @@ Expression quantifier
 * -> 0 or more occurrences
 + -> 1 or more occurrences
 {n, m} -> from n to m occurrences
-
-
-
-
-

@@ -1,0 +1,12 @@
+A simple test to write in the file
+And this is another line of the test
+ABCD
+A simple test to write in the file
+And this is another line of the test
+ABCD
+A simple test to write in the file
+And this is another line of the test
+ABCD
+A simple test to write in the file
+And this is another line of the test
+ABCD
