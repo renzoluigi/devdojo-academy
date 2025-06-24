@@ -1,0 +1,49 @@
+=== NIO ===
+More complete, flexible and safer than File
+
+== Path ==
+Interface which replaces the class File
++ Represents the path of the file
++ You can navigate, observe, compare paths of files using your methods
+
+== Paths ==
+A utility class which offers methods to create objects from Path
++ Paths.get(value) -> converts a string to a Path object
+
+= Absolute Path =
+Complete localization of the file/directory from the root of system
+Windows -> C:\Users\Renzo\Docs\file.txt
+Linux -> /home/users/folder/file.txt
+
+= Relative Path =
+Localization based on the actual directory, don't start from root, but with "." or ".." (based on context of exec)
+folder/file.txt
+../images/image.png
+
+== Files ==
+A utility class which offers methods to manage files/directories
++ Create, copy, move, delete, read, write
++ Verify permissions, attributes etc.
+
+== Normalization ==
+Used to remove redundant elements from the path, like "." (actual path) and ".." (parent directory)
++ Simplify and standardize the path
+Ex:
+home\renzo\dev\..\..\file.txt -> home\file.txt
+or
+\home\.\renzo\.\dev -> \home\renzo\dev
+
+== Relativization ==
+The relativization returns the relative path from two paths
+Ex:
+/home/renzo -> /home/renzo/devdojo/HelloWorld.java = devdojo\HelloWorld.java
+/home/renzo -> /usr/local = ..\..\usr\local
+temp -> temp/temp.20212023 = temp.20212023
+The paths need to be of the same type (absolutes or relatives), or will throw exception
+
+== BasicFileAttributes ==
+Give attributes about directories/files
++ BasicFileAttributes -> For general systems
+Implements BasicFileAttributes:
++ DosFileAttributes -> destined for Windows
++ PosixFileAttributes -> destined for Unix OS
