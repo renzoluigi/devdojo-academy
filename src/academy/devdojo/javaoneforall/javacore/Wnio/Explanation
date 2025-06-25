@@ -47,3 +47,18 @@ Give attributes about directories/files
 Implements BasicFileAttributes:
 + DosFileAttributes -> destined for Windows
 + PosixFileAttributes -> destined for Unix OS
+
+== BasicFileAttributesView ==
+Class that can change the attributes of directories/files
++ Like BasicFileAttributes, have different classes for each OS
+
+== DirectoryStream ==
+A class created to work with directories in general
++ Works like an array (can iterate)
++ Show all files inside a file/directory
+
+== SimpleFileVisitor ==
+Using custom subclasses of SimpleFileVisitor, is useful to create logics for each file in a file tree, like change access etc.
+
+= FileVisitResult =
+A enum that defines what will be done during the walk tree
