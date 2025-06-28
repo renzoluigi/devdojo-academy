@@ -1,0 +1,9 @@
+=== Serialization ===
+Process of convert a object (with his attributes and states) to an array of bytes to persist or share it
+In this process you will works with an array of bytes (low level), generally you will use an subclass from Stream
++ A class only can be serialized if she implements Serializable
++ To don't serialize a attribute or state of class, you have to add the keyword "transient"
+
+== Deserialization ==
+The process of reading data that was serialized (parse to object)
++ Parse to object without call constructor (may affect subclasses)

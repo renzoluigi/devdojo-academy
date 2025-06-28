@@ -8,7 +8,7 @@ import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 
 class FindAllTestOrJavaClass2 extends SimpleFileVisitor<Path> {
-    PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher("glob:**/*{Test*}.{java,class}");
+    PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher("glob:**/*Test*.{java,class}");
 
     @NotNull
     @Override

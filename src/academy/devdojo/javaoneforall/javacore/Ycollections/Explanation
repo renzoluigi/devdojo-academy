@@ -1,0 +1,27 @@
+=== Collections ===
++ Ordered -> The order is of the insertion, or have a previsible order of iteration
++ Sorted -> The order is based on a standard (imposed by a Comparator, using the method compareTo())
+
+= Big-O Notation =
+Always consider this before choose a Collection
++ Time complexity
++ Space complexity
+
+== Comparison ==
+To compare collections, you need to implement one of these classes
+
+= Comparable =
+When you want to use Collections.sort(object<class>), the class needs to implement compareTo from Comparable
++ returns negative if lower than
++ returns 0 if equals to
++ returns positive if greater than
+
+= Comparator =
+It's useful as Comparable, but is generally used when you wants to compare objects without modify the logic of comparison
+
+== Binary Search ==
+A way to search in a Collection
++ Needs to be sorted
++ returns the index or (-(insertion point) -1)
+
+== Conversion ==

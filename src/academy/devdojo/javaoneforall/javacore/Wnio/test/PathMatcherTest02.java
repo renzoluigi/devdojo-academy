@@ -11,7 +11,9 @@ class FindAllTestOrJavaClass extends SimpleFileVisitor<Path> {
     @NotNull
     @Override
     public FileVisitResult visitFile(@NotNull Path file, @NotNull BasicFileAttributes attrs) {
-        System.out.println(file.getFileName() + " contains: " + file.getFileName().toString().contains("Test"));
+        if (file.getFileName().toString().contains("Test")) {
+            System.out.println(file.getFileName());
+        }
         return FileVisitResult.CONTINUE;
     }
 }

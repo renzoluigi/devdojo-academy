@@ -62,3 +62,8 @@ Using custom subclasses of SimpleFileVisitor, is useful to create logics for eac
 
 = FileVisitResult =
 A enum that defines what will be done during the walk tree
+
+== OutputStream ==
+A abstract class that represents a output stream of bytes
++ Output -> Sending something to other place
++ Stream -> Generally it means we working with low level data (practically binary)
