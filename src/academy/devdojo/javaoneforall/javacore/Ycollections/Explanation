@@ -1,4 +1,4 @@
-=== Collections ===
+=== Collection ===
 + Ordered -> The order is of the insertion, or have a previsible order of iteration
 + Sorted -> The order is based on a standard (imposed by a Comparator, using the method compareTo())
 
@@ -24,4 +24,36 @@ A way to search in a Collection
 + Needs to be sorted
 + returns the index or (-(insertion point) -1)
 
-== Conversion ==
+== List ==
+Can initialize with:
+Arrays.asList(o1, o2, o3...) -> May change the values, but don't allow changes in the structure (add or remove)
+List.of(o1, o2, o3...) -> Immutable lists
+
+== Iterator ==
+A class which checks before do an action (hasNext(), next())
+Don't remove objects from a collection inside a foreach, this throws ConcurrentModificationException
++ Safe way to remove in foreach
++ listObject.iterator()
+
+== Set ==
+Unique elements (based on equals of the class)
++ HashSet -> Ordered by hash
++ LinkedHashSet -> Ordered by insertion position
+
+= SortedSet =
+Don't consider equals, only compareTo to find unique elements (this may cause problems if is different)
++ NavigableSet -> An interface with some additional methods to get elements based on already existing positions
++ TreeSet -> To order the class needs to have comparable, or you can add a comparator on the constructor
+
+=== Map ===
++ Key & Value
+Isn't a collection
+Doesn't accept duplicate keys (KeySet)
+Can iterate over with key and value like: "Entry.Map(Key, Value) referenceName : map.entrySet()"
++ HashMap -> Ordered by hash
++ LinkedHashMap -> Ordered by insertion position
+
+== SortedMap ==
+Don't consider equals, only compareTo to find unique elements (this may cause problems if is different)
++ NavigableMap -> An interface with some additional methods to get elements based on already existing positions
++ TreeMap -> Order by comparing the keys (compareTo)

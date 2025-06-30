@@ -4,10 +4,12 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
-public class Manga implements Comparable<Manga> {
+public class
+Manga implements Comparable<Manga> {
     private Long id;
     private String name;
     private double price;
+    private int amount;
 
     public Manga(Long id, String name, double price) {
         Objects.requireNonNull(id, "Id can't be null");
@@ -17,16 +19,21 @@ public class Manga implements Comparable<Manga> {
         this.price = price;
     }
 
+    public Manga(Long id, String name, double price, int amount) {
+        this(id, name, price);
+        this.amount = amount;
+    }
+
     @Override
     public boolean equals(Object object) {
         if (object == null || getClass() != object.getClass()) return false;
         Manga manga = (Manga) object;
-        return Double.compare(price, manga.price) == 0 && Objects.equals(id, manga.id) && Objects.equals(name, manga.name);
+        return Objects.equals(id, manga.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, price);
+        return Objects.hashCode(id);
     }
 
     public Long getId() {
@@ -53,12 +60,21 @@ public class Manga implements Comparable<Manga> {
         this.price = price;
     }
 
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
     @Override
     public String toString() {
         return "Manga{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
+                ", amount=" + amount +
                 '}';
     }
 

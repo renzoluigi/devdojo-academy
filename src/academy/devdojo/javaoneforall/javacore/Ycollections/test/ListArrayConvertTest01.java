@@ -12,7 +12,7 @@ public class ListArrayConvertTest01 {
         numbers.add(2);
         numbers.add(3);
 
-        Integer[] listToArray = numbers.toArray(new Integer[0]); // With passing size 0 to array, the Java will extend it auto, and it's more performative
+        Integer[] listToArray = numbers.toArray(new Integer[0]); // passing size 0 to array, Java will extend it auto (more performative)
         System.out.println(Arrays.toString(listToArray));
 
         System.out.println("----------");
@@ -38,10 +38,10 @@ public class ListArrayConvertTest01 {
         numbersList.add(1);
         System.out.println(numbersList);
 
-        // To use once line
+        // Using once line
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
         List<String> list1 = Arrays.asList("1", "2", "3", "4", "5", "6", "7");
-        List<Integer> integers = List.of(1, 2, 3, 4, 5, 6, 7);// after version 11
 
+        List<Integer> integers = List.of(1, 2, 3, 4, 5, 6, 7);// after version 11
     }
 }
