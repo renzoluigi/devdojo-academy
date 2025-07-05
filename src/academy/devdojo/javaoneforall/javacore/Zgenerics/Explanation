@@ -1,0 +1,6 @@
+=== Generics ===
+A way to force a type on compilation time
+The check of type is on compilation time (a method to guarantee a type)
+Type erasure -> on compiling Java doesn't know what the type is your Collection
+(you need to pass the exactly class what he's looking for)
++ Reuse code (generalization)

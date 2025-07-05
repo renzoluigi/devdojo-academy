@@ -45,6 +45,11 @@ Don't consider equals, only compareTo to find unique elements (this may cause pr
 + NavigableSet -> An interface with some additional methods to get elements based on already existing positions
 + TreeSet -> To order the class needs to have comparable, or you can add a comparator on the constructor
 
+== Queue ==
+Needs a class Comparable (like the SortedSet) to order by a determined priority
+Have a good performance to remove and insert elements
++ FIFO (First In, First Out)
+
 === Map ===
 + Key & Value
 Isn't a collection

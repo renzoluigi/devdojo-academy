@@ -1,0 +1,16 @@
+== Intern Classes ==
+Classes which are intern of an outer class
+
+== Local Classes ==
+Classes which aren't directly intern a outer class (intern a method of the class or inside the init block)
+
+= Access Modifiers =
+Only:
++ abstract
++ final
+
+== Anonymous Classes ==
+To change classes/interfaces (like comparator), creating something like a mini subclass
+
+you can use lambdas to simplify the code
+

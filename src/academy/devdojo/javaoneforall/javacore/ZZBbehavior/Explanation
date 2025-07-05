@@ -1,0 +1,7 @@
+== Behavior by Parameter ==
+You can pass by parameter, the behavior what you want, it's useful when you need to reuse the code with different behaviors
+= Predicate =
+You can create or use the predefined interface with one method (test()) which returns a boolean, so, with:
++ Anonymous Classes
++ Lambdas
+you can change the behavior of this method, changing to more generic and reusable!

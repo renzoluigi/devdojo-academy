@@ -1,0 +1,18 @@
+== Lambdas ==
+More concise code
++ Anonymous, functions
++ Needs a functional interface (one abstract method)
+Syntax:
+(parameter) -> {expression}
+(Car car) -> car.getYear < 2006  (returns boolean)
+s -> System.out.println(s) (when doesn't return anything)
+
+== Functional Interfaces ==
+
+= Predicate =
+
+= Consumer =
+A functional interface without return
+
+= Function =
+Function<T, R> -> type and return
