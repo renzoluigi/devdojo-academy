@@ -10,9 +10,30 @@ s -> System.out.println(s) (when doesn't return anything)
 == Functional Interfaces ==
 
 = Predicate =
+Returns boolean
+
+= BiPredicate =
+Same logic, two values
 
 = Consumer =
-A functional interface without return
+Without return
+s -> System.out.println(s)
 
 = Function =
-Function<T, R> -> type and return
+Function<T, R> -> receives a type T and return type R
+name -> name.length()
+.apply -> to create an object from R
+
+= BiFunction =
+Receives T, U and returns R
+(title, episodes) -> new Anime(title, episodes) / Anime::new
+
+= Supplier =
+To give an object, without parameters (lazy initialization)
+
+== Method Reference ==
+To simplify lambdas, when calls once method
+String::toLowerCase
+AnimeComparators::compareByTitle
+
+When non static -> new AnimeComparators()::compareByTitle

@@ -1,0 +1,10 @@
+== Optional ==
+Easier to read
+-> Avoid NullPointerException
+
+Optional.of(o) -> object (don't catch NullPointerException)
+Optional.ofNullable(o) -> object or Optional.empty
+Optional.orElse(o) -> object or else another object
+Optional.isPresent(action) -> if isn't null, do the action
+
+It's created to use as a type of return, but isn't recommended as a parameter or an attribute

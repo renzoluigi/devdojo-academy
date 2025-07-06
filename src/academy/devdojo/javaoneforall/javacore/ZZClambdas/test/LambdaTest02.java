@@ -9,7 +9,7 @@ public class LambdaTest02 {
         List<String> names = List.of("Renzo", "Sofia", "Vitor Roque");
 
         List<Integer> length = map(names, name -> name.length());
-        List<String> map = map(names, name -> name.toLowerCase()); // the types can be equal
+        List<String> map = map(names, String::toLowerCase); // the types can be equal
 
         System.out.println(length);
         System.out.println(map);

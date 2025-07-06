@@ -4,8 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
-public class
-Manga implements Comparable<Manga> {
+public class Manga implements Comparable<Manga> {
     private Long id;
     private String name;
     private double price;
