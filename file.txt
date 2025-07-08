@@ -1,12 +1,5 @@
-A simple test to write in the file
-And this is another line of the test
-ABCD
-A simple test to write in the file
-And this is another line of the test
-ABCD
-A simple test to write in the file
-And this is another line of the test
-ABCD
-A simple test to write in the file
-And this is another line of the test
-ABCD
+Java is cool
+Java will make me rich
+Python is ...
+Php so...
+oh boy

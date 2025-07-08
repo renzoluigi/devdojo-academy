@@ -1,0 +1,7 @@
+== IntStream & DoubleStream ==
++ To avoid multiple unboxing and boxing (performance loss)
+-> additional methods
+
+== Generating Streams ==
+Stream.iterate() & Stream.generate()
++ StreamTest10.java
