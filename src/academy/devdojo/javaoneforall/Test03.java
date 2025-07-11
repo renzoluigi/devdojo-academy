@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
-import java.util.function.Consumer;
-import java.util.function.Function;
 import java.util.function.Predicate;
 
-public class Test3 {
+public class Test03 {
     private static List<String> names = new ArrayList<>(List.of("Renan", "Renzo", "João", "Andrey", "Luxxta"));
 
     public static void main(String[] args) {

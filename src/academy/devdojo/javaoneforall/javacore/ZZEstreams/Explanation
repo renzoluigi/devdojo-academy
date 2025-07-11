@@ -5,3 +5,23 @@
 == Generating Streams ==
 Stream.iterate() & Stream.generate()
 + StreamTest10.java
+
+== Collectors ==
++ StreamTest11.java -
+
+= GroupingBy =
+Pass what you want to return
++ StreamTest12.java - StreamTest15
+
+== Parallel Streams ==
+Use parallel when you have predefined lengths
+
+Hints to consider:
+- Benchmark
+- Unboxing | boxing
+- (limit, findFirst)
+- Total cost of computing N, P (When the processing is big, generally is better to use parallel)
+- Data amount (When have small data, is better to use only one thread)
+- Collection types
+- Stream length (predefined -> better to share)
+- Merge process

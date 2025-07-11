@@ -1,0 +1,22 @@
+=== Threads ===
+It's like an worker which is working in a process
++ Process may have some workers
+
+== Native Threads ==
+"Virtual threads"
+
+= Daemon x User =
+User: JVM closes the program when all Daemon Threads was closed
+Daemon: Lower priority, are responsible for Garbage Collector
+
+== Thread States ==
+New -> Runnable <--> Running ->
+Waiting/Blocked
+Waiting Blocked -> Runnable
+Running -> Dead
+
+= Meanings =
+Runnable = ready to run
+Running = running (doing what he was desired to do)
+Waiting/Blocked = waiting for the next command / blocked by a command (sleeping)
+Dead = dead thread (impossible to do anything)

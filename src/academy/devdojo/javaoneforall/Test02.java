@@ -6,7 +6,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-public class Test2 {
+public class Test02 {
     public static void main(String[] args) {
         List<String> names = new ArrayList<>(List.of("Renan", "Renzo", "João", "Andrey", "Luxxta"));
 

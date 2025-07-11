@@ -1,6 +1,6 @@
 package academy.devdojo.javaoneforall;
 
-public class Test {
+public class Test01 {
     public static void main(String[] args) {
         int[] arr1 = new int[]{1,2,4,5,7,8,9};
         int[] arr2 = new int[]{2,4,6,8,10};
