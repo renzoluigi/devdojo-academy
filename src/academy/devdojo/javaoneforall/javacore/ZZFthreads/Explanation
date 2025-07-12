@@ -20,3 +20,17 @@ Runnable = ready to run
 Running = running (doing what he was desired to do)
 Waiting/Blocked = waiting for the next command / blocked by a command (sleeping)
 Dead = dead thread (impossible to do anything)
+
+== Synchronized ==
+Is a modifier which can avoid parallelism/asynchronism and execute atomically (lock)
+Atomic execution -> From start to end, without interruption
+
+= methods wait, notify and notifyAll =
+needs a synchronized context
+wait ->
+
+== Deadlock ==
+Threads blocking each other:
+Thread 1 blocks recurse 1 and wants recurse 2
+Thread 2 blocks recurse 2 and wants recurse 1
+

@@ -3,7 +3,7 @@ package academy.devdojo.javaoneforall.javacore.ZZFthreads.test;
 import academy.devdojo.javaoneforall.javacore.ZZFthreads.domain.Account;
 
 public class ThreadAccountTest01 implements Runnable {
-    private Account account = new Account();
+    private final Account account = new Account();
 
     public static void main(String[] args) {
         ThreadAccountTest01 threadAccountTest01 = new ThreadAccountTest01();
@@ -24,15 +24,18 @@ public class ThreadAccountTest01 implements Runnable {
         }
     }
 
-    private synchronized void withdraw(int amount) { // with this, we can avoid concurrence/asynchronism (lock thread)
-        if (account.getBalance() >= amount) {
-            System.out.println(getThreadName() + " is going to withdraw money");
-            // the problem is here, if the thread stops, the next verification will not consider the withdrawal of the previous thread
-            // i.s., the thread that starts this method has to finish before another thread start it (avoid concurrence)
-            account.withdraw(amount);
-            System.out.println(getThreadName() + " completed the withdraw, balance of the account: " + account.getBalance());
-        } else {
-            System.out.println("Without enough money to " + getThreadName() + " do the withdraw");
+    private void withdraw(int amount) { // with synchronized, we can avoid parallelism/asynchronism (lock) and execute atomically
+        System.out.println(getThreadName() + " #### outside the synchronized");
+        synchronized (account) {
+            if (account.getBalance() >= amount) {
+                System.out.println(getThreadName() + " **** inside the synchronized");
+                // the problem is here, if the thread stops, the next verification will not consider the withdrawal of the previous thread
+                // i.s., the thread that starts this method has to finish before another thread start it (avoid paralellism)
+                account.withdraw(amount);
+                System.out.println(getThreadName() + " completed the withdraw, balance of the account: " + account.getBalance());
+            } else {
+                System.out.println("Without enough money to " + getThreadName() + " do the withdraw");
+            }
         }
     }
 
