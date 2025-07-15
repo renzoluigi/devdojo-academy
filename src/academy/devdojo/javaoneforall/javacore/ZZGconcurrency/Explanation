@@ -1,1 +1,8 @@
 == Concurrency ==
+
+= Lock =
+An interface which makes available a more controlled way to set the behavior of threads
++ ALWAYS the thread need to be unlocked after do a lock
++ better performance
+
+= Executors =

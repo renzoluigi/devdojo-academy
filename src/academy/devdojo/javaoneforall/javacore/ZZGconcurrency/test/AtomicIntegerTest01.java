@@ -1,6 +1,5 @@
 package academy.devdojo.javaoneforall.javacore.ZZGconcurrency.test;
 
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -12,9 +11,12 @@ class Counter {
     // fair -> after finish, consider the thread with higher priority (time waiting) to give lock
     void increment() {
         lock.lock();
-        count++;
-        atomicInteger.incrementAndGet();
-        lock.unlock();
+        try {
+            count++;
+            atomicInteger.incrementAndGet();
+        } finally {
+            lock.unlock();
+        }
     }
 
     public int getCount() {
@@ -41,7 +43,7 @@ public class AtomicIntegerTest01 {
         t1.start();
         t2.start();
 
-        t1.join(); // to main helps them
+        t1.join(); // to main "helps" them
         t2.join();
 
         System.out.println(counter.getCount());
